@@ -7,6 +7,9 @@ import { AppService } from './app.service';
 import { AuthModule } from './security/auth/auth.module';
 import { UsersModule } from './security/users/users.module';
 import { ProductsModule } from './products/products.module';
+import { CartModule } from './cart/cart.module';
+import { OrderModule } from './order/order.module';
+import { ReviewModule } from './review/review.module';
 
 @Module({
   imports: [
@@ -23,7 +26,10 @@ import { ProductsModule } from './products/products.module';
       inject: [ConfigService],
     }),
     AuthModule, 
-    UsersModule, ProductsModule
+    UsersModule, 
+    ProductsModule, 
+    CartModule, 
+    OrderModule, ReviewModule
   ],
 
   controllers: [AppController],
